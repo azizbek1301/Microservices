@@ -2,11 +2,6 @@
 using EduCenter.Application.UseCases.Teacher.Commands;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EduCenter.Application.UseCases.Teacher.Handlers
 {
@@ -26,8 +21,8 @@ namespace EduCenter.Application.UseCases.Teacher.Handlers
             teacher.Name = request.Name;
             teacher.LastName = request.LastName;
             teacher.Phone = request.Phone;
-            teacher.Role= request.Role;
-            teacher.SchoolId= request.SchoolId;
+            teacher.Role = request.Role;
+            teacher.SchoolId = request.SchoolId;
 
             _applicationDbContext.Teacher.Update(teacher);
             var result = await _applicationDbContext.SaveChangesAsync(cancellationToken);

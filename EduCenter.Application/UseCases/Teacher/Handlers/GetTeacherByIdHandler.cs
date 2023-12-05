@@ -1,6 +1,5 @@
 ﻿using EduCenter.Application.Abstarction;
 using EduCenter.Application.UseCases.Teacher.Queries;
-using EduCenter.Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,7 +16,7 @@ namespace EduCenter.Application.UseCases.Teacher.Handlers
 
         public async Task<Domain.Entities.Teacher> Handle(GetTeacherByIdCommand request, CancellationToken cancellationToken)
         {
-            var teacher =await _applicationDbContext.Teacher.FirstOrDefaultAsync(x=>x.TeacherId == request.TeacherId);
+            var teacher = await _applicationDbContext.Teacher.FirstOrDefaultAsync(x => x.TeacherId == request.TeacherId);
             return teacher;
         }
     }
