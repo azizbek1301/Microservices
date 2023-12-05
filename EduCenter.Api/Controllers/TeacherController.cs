@@ -1,11 +1,7 @@
 ﻿using EduCenter.Api.ViewModels;
-using EduCenter.Application.UseCases.School.Commands;
-using EduCenter.Application.UseCases.School.Queries;
 using EduCenter.Application.UseCases.Teacher.Commands;
-using EduCenter.Application.UseCases.Teacher.Handlers;
 using EduCenter.Application.UseCases.Teacher.Queries;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EduCenter.Api.Controllers
@@ -26,10 +22,10 @@ namespace EduCenter.Api.Controllers
             var command = new CreatTeacherCommand
             {
                 Name = model.Name,
-                LastName= model.LastName,
-                Phone= model.Phone,
-                Role= model.Role,
-                SchoolId= model.SchoolId,
+                LastName = model.LastName,
+                Phone = model.Phone,
+                Role = model.Role,
+                SchoolId = model.SchoolId,
 
             };
 
@@ -61,12 +57,12 @@ namespace EduCenter.Api.Controllers
         {
             var teacher = new UpdateTeacherCommand()
             {
-                
-                TeacherId=model.TeacherId,
-                LastName=model.LastName,                
+
+                TeacherId = model.TeacherId,
+                LastName = model.LastName,
                 Name = model.Name,
                 SchoolId = model.SchoolId,
-                Role= model.Role,
+                Role = model.Role,
                 Phone = model.Phone
             };
 
@@ -77,7 +73,7 @@ namespace EduCenter.Api.Controllers
         [HttpGet]
         public async ValueTask<IActionResult> GetTeacherByIdAsync(int Id)
         {
-            var res = await _mediatr.Send(new GetTeacherByIdCommand {TeacherId = Id });
+            var res = await _mediatr.Send(new GetTeacherByIdCommand { TeacherId = Id });
             return Ok(res);
         }
     }
