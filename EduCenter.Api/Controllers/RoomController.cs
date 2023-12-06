@@ -1,8 +1,11 @@
 ﻿using EduCenter.Api.ViewModels;
 using EduCenter.Application.UseCases.Room.Commands;
 using EduCenter.Application.UseCases.Room.Queries;
+using EduCenter.Application.UseCases.School.Queries;
+using EduCenter.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace EduCenter.Api.Controllers
 {
@@ -11,10 +14,12 @@ namespace EduCenter.Api.Controllers
     public class RoomController : ControllerBase
     {
         private readonly IMediator _mediatr;
+        private readonly IMemoryCache _memoryCache;
 
-        public RoomController(IMediator mediatr)
+        public RoomController(IMediator mediatr, IMemoryCache memoryCache)
         {
             _mediatr = mediatr;
+            _memoryCache = memoryCache;
         }
 
         [HttpPost]
@@ -35,12 +40,18 @@ namespace EduCenter.Api.Controllers
         [HttpGet]
         public async ValueTask<IActionResult> GetAllRoomAsync()
         {
-            var room = await _mediatr.Send(new GetAllRoomCommand());
-            return Ok(room);
+            var value = _memoryCache.Get("key");
+            if (value == null)
+            {
+                _memoryCache.Set(
+                    key: "key",
+                    value: await _mediatr.Send(new GetAllRoomCommand()));
+            }
+            return Ok(_memoryCache.Get("key") as List<Room>);
         }
 
         [HttpDelete]
-        public async ValueTask<IActionResult> DeleteById(int Id)
+        public async ValueTask<IActionResult> DeleteByIdAsync(int Id)
         {
             var command = new DeleteRoomCommand
             {

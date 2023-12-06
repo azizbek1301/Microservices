@@ -1,8 +1,12 @@
 ﻿using EduCenter.Api.ViewModels;
 using EduCenter.Application.UseCases.Group.Commands;
 using EduCenter.Application.UseCases.Group.Queries;
+using EduCenter.Application.UseCases.School.Queries;
+using EduCenter.Domain.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace EduCenter.Api.Controllers
 {
@@ -11,10 +15,11 @@ namespace EduCenter.Api.Controllers
     public class GroupController : ControllerBase
     {
         private readonly IMediator _mediatr;
-
-        public GroupController(IMediator mediatr)
+        private readonly IMemoryCache _memoryCache;
+        public GroupController(IMediator mediatr, IMemoryCache memoryCache)
         {
             _mediatr = mediatr;
+            _memoryCache = memoryCache;
         }
 
         [HttpPost]
@@ -34,14 +39,21 @@ namespace EduCenter.Api.Controllers
         }
 
         [HttpGet]
+        
         public async ValueTask<IActionResult> GetAllGroupAsync()
         {
-            var group = await _mediatr.Send(new GetAllGroupCommand());
-            return Ok(group);
+            var value = _memoryCache.Get("key");
+            if (value == null)
+            {
+                _memoryCache.Set(
+                    key: "key",
+                    value: await _mediatr.Send(new GetAllGroupCommand()));
+            }
+            return Ok(_memoryCache.Get("key") as List<Group>);
         }
 
         [HttpDelete]
-        public async ValueTask<IActionResult> DeleteById(int Id)
+        public async ValueTask<IActionResult> DeleteByIdAsync(int Id)
         {
             var command = new DeleteGroupCommand
             {

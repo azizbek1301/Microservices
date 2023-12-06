@@ -1,8 +1,11 @@
 ﻿using EduCenter.Api.ViewModels;
+using EduCenter.Application.UseCases.School.Queries;
 using EduCenter.Application.UseCases.Student.Commands;
 using EduCenter.Application.UseCases.Student.Queries;
+using EduCenter.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace EduCenter.Api.Controllers
 {
@@ -11,10 +14,11 @@ namespace EduCenter.Api.Controllers
     public class StudentController : ControllerBase
     {
         private readonly IMediator _mediatr;
-
-        public StudentController(IMediator mediatr)
+        private readonly IMemoryCache _memoryCache;
+        public StudentController(IMediator mediatr, IMemoryCache memoryCache)
         {
             _mediatr = mediatr;
+            _memoryCache = memoryCache;
         }
 
         [HttpPost]
@@ -40,8 +44,14 @@ namespace EduCenter.Api.Controllers
         [HttpGet]
         public async ValueTask<IActionResult> GetAllStudentAsync()
         {
-            var student = await _mediatr.Send(new GetAllStudentCommand());
-            return Ok(student);
+            var value = _memoryCache.Get("key");
+            if (value == null)
+            {
+                _memoryCache.Set(
+                    key: "key",
+                    value: await _mediatr.Send(new GetAllStudentCommand()));
+            }
+            return Ok(_memoryCache.Get("key") as List<Student>);
         }
 
         [HttpDelete]
