@@ -73,5 +73,11 @@ namespace EduCenter.Api.Controllers
             var res= await _mediatr.Send(new GetSchoolByIdCommand { Id = Id });
             return Ok(res);
         }
+        [HttpGet]
+        public async ValueTask<IActionResult> GetSchoolInfoAsync()
+        {
+            var school = await _mediatr.Send(new GetSchoolInfoCommand());
+            return Ok(school);
+        }
     }
 }

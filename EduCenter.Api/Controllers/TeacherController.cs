@@ -76,5 +76,11 @@ namespace EduCenter.Api.Controllers
             var res = await _mediatr.Send(new GetTeacherByIdCommand { TeacherId = Id });
             return Ok(res);
         }
+        [HttpGet]
+        public async ValueTask<IActionResult> GetTeacherInfoAsync()
+        {
+            var res = await _mediatr.Send(new GetTeacherInfoCommand());
+            return Ok(res);
+        }
     }
 }
