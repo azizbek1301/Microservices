@@ -1,0 +1,35 @@
+version: '3.4'
+
+networks:
+  backend:
+
+services:
+  sqldata:
+    volumes:
+    - ./db:/var/opt/mssql/data        
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - SA_PASSWORD=Numsey#2022
+      - ACCEPT_EULA=Y
+    ports:
+        - 8181:1433
+    networks:
+        - backend
+
+  educenter.api:
+    image: ${DOCKER_REGISTRY-}educenterapi
+    build:
+      context: .
+      dockerfile: EduCenter.Api/Dockerfile
+    networks:
+        - backend
+
+  apigateway.api:
+    image: ${DOCKER_REGISTRY-}apigatewayapi
+    build:
+      context: .
+      dockerfile: ApiGateway.Api/Dockerfile
+    ports:
+        - 7080:80
+    networks:
+        - backend
