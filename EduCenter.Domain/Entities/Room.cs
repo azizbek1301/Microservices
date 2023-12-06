@@ -1,4 +1,6 @@
-﻿namespace EduCenter.Domain.Entities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace EduCenter.Domain.Entities
 {
     public class Room
     {
@@ -9,5 +11,4 @@
         public ICollection<GroupRoom> Groups { get; set; }
         public ICollection<StudentRoom> StudentRooms { get; set; }
     }
-
 }
