@@ -1,6 +1,5 @@
 ﻿using EduCenter.Application.Abstarction;
 using EduCenter.Domain.Entities;
-using EduCenter.Infrastructure.Configurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
@@ -49,21 +48,21 @@ namespace EduCenter.Infrastructure.Peristance
         public DbSet<Teacher> Teacher { get; set; }
 
         public DbSet<StudentRoom> StudentRoom { get; set; }
-        public DbSet<StudentTeacher> StudentTeacher { get;set; }
+        public DbSet<StudentTeacher> StudentTeacher { get; set; }
         public DbSet<GroupRoom> GroupRoom { get; set; }
 
 
-/*        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
+        /*        protected override void OnModelCreating(ModelBuilder modelBuilder)
+                {
+                    base.OnModelCreating(modelBuilder);
 
-            modelBuilder.ApplyConfiguration(new GroupConfiguration());
-            modelBuilder.ApplyConfiguration(new RoomConfiguration());
-            modelBuilder.ApplyConfiguration(new SchoolConfiguration());
-            modelBuilder.ApplyConfiguration(new StudentConfiguration());
-            modelBuilder.ApplyConfiguration(new TeacherConfiguration());
-        }
-*/
+                    modelBuilder.ApplyConfiguration(new GroupConfiguration());
+                    modelBuilder.ApplyConfiguration(new RoomConfiguration());
+                    modelBuilder.ApplyConfiguration(new SchoolConfiguration());
+                    modelBuilder.ApplyConfiguration(new StudentConfiguration());
+                    modelBuilder.ApplyConfiguration(new TeacherConfiguration());
+                }
+        */
 
     }
 }
