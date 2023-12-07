@@ -2,11 +2,6 @@
 using EduCenter.Application.UseCases.Group.Commands;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EduCenter.Application.UseCases.Group.Handler
 {
@@ -21,8 +16,8 @@ namespace EduCenter.Application.UseCases.Group.Handler
 
         public async Task<bool> Handle(DeleteGroupCommand request, CancellationToken cancellationToken)
         {
-            var group=await _context.Group.FirstOrDefaultAsync(x=>x.Id==request.Id);
-            if(group == null)
+            var group = await _context.Group.FirstOrDefaultAsync(x => x.Id == request.Id);
+            if (group == null)
             {
                 return false;
 
