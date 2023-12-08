@@ -6,7 +6,7 @@ namespace Sport.DataApplication.Abstraction
 {
     public interface IApplicationDbContext
     {
-        public DbSet<Team> Teams { get; set; }
+        public DbSet<Team> Teamlar { get; set; }
         public DbSet<Player> Players { get; set; }
 
         public DbSet<Coach> Coaches { get; set; }
