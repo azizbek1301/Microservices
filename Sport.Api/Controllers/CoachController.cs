@@ -26,7 +26,7 @@ namespace Sport.Api.Controllers
             var command = new CreateCoachCommand
             {
                 Name = model.Name,
-                Price = model.Price,
+                Salary = model.Salary,
                 TeamId = model.TeamId,
 
             };
@@ -43,9 +43,10 @@ namespace Sport.Api.Controllers
             var value = _memoryCache.Get("Id");
             if (value == null)
             {
+                var coches = await _mediatr.Send(new GetAllCoachCommand());
                 _memoryCache.Set(
                     key: "Id",
-                    value: await _mediatr.Send(new GetAllCoachCommand()));
+                    value: coches );
             }
             return Ok(_memoryCache.Get("Id") as List<Coach>);
         }
@@ -69,7 +70,7 @@ namespace Sport.Api.Controllers
 
                 Id = model.Id,
                 Name = model.Name,
-                Price = model.Price,
+                Salary = model.Salary,
                 TeamId = model.TeamId,
             };
 
