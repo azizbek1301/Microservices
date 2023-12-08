@@ -30,8 +30,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/deleteIdGroup/{Id}",
@@ -42,8 +42,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/getIdGroup/{Id}",
@@ -54,8 +54,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/updateGroup",
@@ -70,8 +70,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/allRoom",
@@ -82,8 +82,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/createRoom",
@@ -94,8 +94,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/deleteIdRoom/{Id}",
@@ -106,8 +106,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/getIdRoom/{Id}",
@@ -118,8 +118,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/updateRoom",
@@ -133,8 +133,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/allSchool",
@@ -145,8 +145,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/createSchool",
@@ -157,8 +157,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/deleteIdSchool/{Id}",
@@ -169,8 +169,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/getIdSchool/{Id}",
@@ -181,8 +181,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/updateSchool",
@@ -196,8 +196,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/allStudent",
@@ -208,8 +208,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/createStudent",
@@ -220,8 +220,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/deleteIdStudent/{Id}",
@@ -232,8 +232,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/getIdStudent/{Id}",
@@ -244,8 +244,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/updateStudent",
@@ -259,8 +259,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/allTeacher",
@@ -271,8 +271,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/createTeacher",
@@ -283,8 +283,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/deleteIdTeacher/{Id}",
@@ -295,8 +295,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/getIdTeacher/{Id}",
@@ -307,11 +307,266 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5202
+          "Host": "educenter.api",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/updateTeacher",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+
+
+
+    // Team
+
+    {
+      "DownstreamPathTemplate": "/api/Team/GetAllTeam",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/allTeam",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Team/CreateTeam",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/createTeam",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Team/DeleteById?id={Id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/deleteIdTeam/{Id}",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Team/GetTeamById?id={Id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/getIdTeam/{Id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Team/UpdateTeam",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/updateTeam",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+
+    // Player
+
+    {
+      "DownstreamPathTemplate": "/api/Player/GetAllPlayer",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/allPlayer",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Player/CreatePlayer",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/createPlayer",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Player/DeleteById?id={Id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/deleteIdPlayer/{Id}",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Player/GetPlayerById?id={Id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/getIdPlayer/{Id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Player/UpdatePlayer",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/updatePlayer",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+
+    // Order
+
+    {
+      "DownstreamPathTemplate": "/api/Order/GetAllOrder",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/allOrder",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Player/CreateOrder",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/createOrder",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Order/DeleteById?id={Id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/deleteIdOrder/{Id}",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Player/GetOrderById?id={Id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/getIdOrder/{Id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Order/UpdateOrder",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/updateOrder",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+
+
+    // Coach
+
+    {
+      "DownstreamPathTemplate": "/api/Coach/GetAllCoach",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/allCoach",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Coach/CreateCoach",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/createCoach",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Coach/DeleteById?id={Id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/deleteIdCoach/{Id}",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Coach/GetCoachById?id={Id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/getIdCoach/{Id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Player/UpdateCoach",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sport.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/updateCoach",
       "UpstreamHttpMethod": [ "Put" ]
     }
 
