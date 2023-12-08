@@ -34,7 +34,7 @@ namespace EduCenter.Infrastructure.Peristance
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=sqldata;Initial Catalog=EduCenterDb;User Id=SA;Password=Numsey#2022;Persist Security Info=True;;TrustServerCertificate=true", builder =>
+            optionsBuilder.UseSqlServer("Data Source=sqldata;Initial Catalog=EduCenterDb;User Id=SA;Password=Numsey#2022;Persist Security Info=True;TrustServerCertificate=true", builder =>
             {
                 builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
             });
