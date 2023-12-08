@@ -21,7 +21,7 @@ builder.Services.AddSwaggerGen();
 
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Docker")));
 builder.Services.AddMemoryCache();
 
 var app = builder.Build();
