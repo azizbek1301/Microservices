@@ -10,23 +10,23 @@ namespace Sport.Infrastructure.Peristance
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            
-
+            Database.Migrate();
+           
         }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Data Source=sqldata;Initial Catalog=IshkalDb;User Id=SA;Password=Numsey#2022;Persist Security Info=True;TrustServerCertificate=true", builder =>
+            {
+                builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
+            });
+            base.OnConfiguring(optionsBuilder);
+        }
         public DbSet<Team> Teamlar { get; set; }
         public DbSet<Player> Players { get; set; }
         public DbSet<Coach> Coaches { get; set; }
         public DbSet<Order> Orders { get; set; }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseSqlServer("Data Source=sqldata;Initial Catalog=IshkalDb;User Id=SA;Password=Numsey#2022;Persist Security Info=True;TrustServerCertificate=true", builder =>
-        //    {
-        //        builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
-        //    });
-        //    base.OnConfiguring(optionsBuilder);
-        //}
 
     }
 }
