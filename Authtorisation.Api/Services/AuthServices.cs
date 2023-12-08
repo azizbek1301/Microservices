@@ -16,7 +16,7 @@ namespace Authtorisation.Api.Services
             var claims = new List<Claim>()
             {
                 new Claim(ClaimTypes.Name, loginDto.UserName),
-                new Claim(ClaimTypes.Role, "User")
+                new Claim(ClaimTypes.Role, "Admin")
             };
 
             var token = new JwtSecurityToken(
