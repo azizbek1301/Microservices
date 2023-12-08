@@ -11,7 +11,7 @@ namespace Sport.Infrastructure.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Teams",
+                name: "Teamlar",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -20,7 +20,7 @@ namespace Sport.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Teams", x => x.Id);
+                    table.PrimaryKey("PK_Teamlar", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -30,16 +30,16 @@ namespace Sport.Infrastructure.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Salary = table.Column<int>(type: "int", nullable: false),
                     TeamId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Coaches", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Coaches_Teams_TeamId",
+                        name: "FK_Coaches_Teamlar_TeamId",
                         column: x => x.TeamId,
-                        principalTable: "Teams",
+                        principalTable: "Teamlar",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -58,9 +58,9 @@ namespace Sport.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_Players", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Players_Teams_TeamId",
+                        name: "FK_Players_Teamlar_TeamId",
                         column: x => x.TeamId,
-                        principalTable: "Teams",
+                        principalTable: "Teamlar",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -114,7 +114,7 @@ namespace Sport.Infrastructure.Migrations
                 name: "Players");
 
             migrationBuilder.DropTable(
-                name: "Teams");
+                name: "Teamlar");
         }
     }
 }

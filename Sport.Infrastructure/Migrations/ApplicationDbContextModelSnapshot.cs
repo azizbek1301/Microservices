@@ -33,8 +33,8 @@ namespace Sport.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<int>("Salary")
+                        .HasColumnType("int");
 
                     b.Property<int>("TeamId")
                         .HasColumnType("int");
@@ -106,7 +106,7 @@ namespace Sport.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Teams");
+                    b.ToTable("Teamlar");
                 });
 
             modelBuilder.Entity("Sport.Domain.Entities.Coach", b =>

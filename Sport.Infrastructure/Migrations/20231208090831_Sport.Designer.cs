@@ -11,7 +11,7 @@ using Sport.Infrastructure.Peristance;
 namespace Sport.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231207114422_Sport")]
+    [Migration("20231208090831_Sport")]
     partial class Sport
     {
         /// <inheritdoc />
@@ -36,8 +36,8 @@ namespace Sport.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<int>("Salary")
+                        .HasColumnType("int");
 
                     b.Property<int>("TeamId")
                         .HasColumnType("int");
@@ -109,7 +109,7 @@ namespace Sport.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Teams");
+                    b.ToTable("Teamlar");
                 });
 
             modelBuilder.Entity("Sport.Domain.Entities.Coach", b =>
