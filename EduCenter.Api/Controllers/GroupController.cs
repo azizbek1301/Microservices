@@ -42,14 +42,14 @@ namespace EduCenter.Api.Controllers
         
         public async ValueTask<IActionResult> GetAllGroupAsync()
         {
-            var value = _memoryCache.Get("key");
+            var value = _memoryCache.Get("Id");
             if (value == null)
             {
                 _memoryCache.Set(
-                    key: "key",
+                    key: "Id",
                     value: await _mediatr.Send(new GetAllGroupCommand()));
             }
-            return Ok(_memoryCache.Get("key") as List<Group>);
+            return Ok(_memoryCache.Get("Id") as List<Group>);
         }
 
         [HttpDelete]

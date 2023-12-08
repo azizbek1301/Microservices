@@ -40,14 +40,14 @@ namespace EduCenter.Api.Controllers
         [HttpGet]
         public async ValueTask<IActionResult> GetAllRoomAsync()
         {
-            var value = _memoryCache.Get("key");
+            var value = _memoryCache.Get("Id");
             if (value == null)
             {
                 _memoryCache.Set(
-                    key: "key",
+                    key: "Id",
                     value: await _mediatr.Send(new GetAllRoomCommand()));
             }
-            return Ok(_memoryCache.Get("key") as List<Room>);
+            return Ok(_memoryCache.Get("Id") as List<Room>);
         }
 
         [HttpDelete]

@@ -83,14 +83,14 @@ namespace EduCenter.Api.Controllers
         [HttpGet]
         public async ValueTask<IActionResult> GetTeacherInfoAsync()
         {
-            var value = _memoryCache.Get("key");
+            var value = _memoryCache.Get("Id");
             if (value == null)
             {
                 _memoryCache.Set(
-                    key: "key",
+                    key: "Id",
                     value: await _mediatr.Send(new GetTeacherInfoCommand()));
             }
-            return Ok(_memoryCache.Get("key") as List<Teacher>);
+            return Ok(_memoryCache.Get("Id") as List<Teacher>);
         }
     }
 }

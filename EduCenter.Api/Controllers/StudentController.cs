@@ -44,14 +44,14 @@ namespace EduCenter.Api.Controllers
         [HttpGet]
         public async ValueTask<IActionResult> GetAllStudentAsync()
         {
-            var value = _memoryCache.Get("key");
+            var value = _memoryCache.Get("Id");
             if (value == null)
             {
                 _memoryCache.Set(
-                    key: "key",
+                    key: "Id",
                     value: await _mediatr.Send(new GetAllStudentCommand()));
             }
-            return Ok(_memoryCache.Get("key") as List<Student>);
+            return Ok(_memoryCache.Get("Id") as List<Student>);
         }
 
         [HttpDelete]
