@@ -47,3 +47,10 @@ services:
     networks:
         - backend
 
+
+  authtorisation.api:
+    image: ${DOCKER_REGISTRY-}authtorisationapi
+    build:
+      context: .
+      dockerfile: Authtorisation.Api/Dockerfile
+

@@ -3,6 +3,7 @@ using EduCenter.Application.UseCases.School.Commands;
 using EduCenter.Application.UseCases.School.Queries;
 using EduCenter.Domain.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 
@@ -10,6 +11,7 @@ namespace EduCenter.Api.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
+    [Authorize(Roles ="Admin")]
     public class SchoolController : ControllerBase
     {
         private readonly IMediator _mediatr;

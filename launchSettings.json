@@ -6,7 +6,8 @@
       "serviceActions": {
         "educenter.api": "StartDebugging",
         "apigateway.api": "StartDebugging",
-        "sport.api": "StartDebugging"
+        "sport.api": "StartDebugging",
+        "authtorisation.api": "StartDebugging"
       }
     }
   }

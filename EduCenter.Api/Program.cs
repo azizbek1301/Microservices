@@ -2,6 +2,8 @@ using EduCenter.Application;
 using EduCenter.Infrastructure;
 using EduCenter.Infrastructure.Peristance;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,19 +26,19 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddMemoryCache();
 
-//builder.Services.AddAuthentication("Bearer")
-//    .AddJwtBearer(options =>
-//    {
-//        options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
-//        {
-//            ValidateIssuer = true,
-//            ValidIssuer = "Issuer",
-//            ValidateAudience = true,
-//            ValidAudience = "Audience",
-//            ValidateIssuerSigningKey = true,
-//            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("asosiyUser711w15ed16516w6e51de65f1ef1e6f51ef51"))
-//        };
-//    });
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidIssuer = "Issuer",
+            ValidateAudience = true,
+            ValidAudience = "Audience",
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("asosiyUser711w15ed16516w6e51de65f1ef1e6f51ef51"))
+        };
+    });
 
 var app = builder.Build();
 
@@ -46,8 +48,8 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 
+app.UseAuthentication();
 app.UseAuthorization();
-//app.UseAuthentication();
 
 app.MapControllers();
 

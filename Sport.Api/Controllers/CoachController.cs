@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Sport.Api.ViewModel;
@@ -10,6 +11,7 @@ namespace Sport.Api.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
+    [Authorize(Roles ="User")]
     public class CoachController : ControllerBase
     {
         private readonly IMediator _mediatr;
