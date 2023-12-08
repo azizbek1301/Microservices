@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sport.Api", "Sport.Api\Sport.Api.csproj", "{536E5AFB-37A4-46B1-8FCC-1D8DFA1C8628}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sport.Api", "Sport.Api\Sport.Api.csproj", "{536E5AFB-37A4-46B1-8FCC-1D8DFA1C8628}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{73A826E7-7356-4421-8D37-56F572BC9CE4}"
 EndProject
@@ -17,37 +17,43 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Community", "Community", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", "{8C3AF9E0-1E15-4EA3-A89D-BD6013ACB99E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sport.Domain", "Sport.Domain\Sport.Domain.csproj", "{0B5058B0-A364-456A-95CC-7A3F20471EF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sport.Domain", "Sport.Domain\Sport.Domain.csproj", "{0B5058B0-A364-456A-95CC-7A3F20471EF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sport.DataAccess", "Sport.Service\Sport.DataAccess.csproj", "{F5D9BD99-6340-458F-AD59-43552C7C1E8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sport.DataApplication", "Sport.Service\Sport.DataApplication.csproj", "{F5D9BD99-6340-458F-AD59-43552C7C1E8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sport.Service", "Sport.Infrastructure\Sport.Service.csproj", "{081A8B19-6378-4DED-8AF8-63F029E2DB7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sport.Infrastructure", "Sport.Infrastructure\Sport.Infrastructure.csproj", "{081A8B19-6378-4DED-8AF8-63F029E2DB7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduCenter.Api", "EduCenter.Api\EduCenter.Api.csproj", "{226DFCEB-9FBD-4592-B672-3ED79A94C977}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduCenter.Api", "EduCenter.Api\EduCenter.Api.csproj", "{226DFCEB-9FBD-4592-B672-3ED79A94C977}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduCenter.Domain", "EduCenter.Domain\EduCenter.Domain.csproj", "{5F4B3216-DFFD-4BBE-B7E7-952F4DBEE4FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduCenter.Domain", "EduCenter.Domain\EduCenter.Domain.csproj", "{5F4B3216-DFFD-4BBE-B7E7-952F4DBEE4FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduCenter.Service", "EduCenter.Infrastructure\EduCenter.Service.csproj", "{EC570445-DF69-40A8-BC54-7B9634BA14ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduCenter.Infrastructure", "EduCenter.Infrastructure\EduCenter.Infrastructure.csproj", "{EC570445-DF69-40A8-BC54-7B9634BA14ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduCenter.DataAccess", "EduCenter.Application\EduCenter.DataAccess.csproj", "{3F33B7A4-E128-4428-B55C-6F96CD5A7569}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduCenter.Application", "EduCenter.Application\EduCenter.Application.csproj", "{3F33B7A4-E128-4428-B55C-6F96CD5A7569}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Community.Api", "Community.Api\Community.Api.csproj", "{EF169B11-6616-4999-9E8D-78C5ABB37347}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Community.Api", "Community.Api\Community.Api.csproj", "{EF169B11-6616-4999-9E8D-78C5ABB37347}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Community.Domain", "Community.Domain\Community.Domain.csproj", "{351468A3-B3A0-4CDB-A00E-986038A19B5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Community.Domain", "Community.Domain\Community.Domain.csproj", "{351468A3-B3A0-4CDB-A00E-986038A19B5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Community.Infrastructure", "Community.Infrastructure\Community.Infrastructure.csproj", "{6C5C09E4-B02B-4B93-818A-FBA63BA240B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Community.Infrastructure", "Community.Infrastructure\Community.Infrastructure.csproj", "{6C5C09E4-B02B-4B93-818A-FBA63BA240B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Community.Service", "Community.DataAccess\Community.Service.csproj", "{D0D01E58-5F7F-4AAC-A0BD-A2E403861B96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Community.Service", "Community.DataAccess\Community.Service.csproj", "{D0D01E58-5F7F-4AAC-A0BD-A2E403861B96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarFactory.Api", "CarFactory.Api\CarFactory.Api.csproj", "{A230A602-257D-43C3-943F-E9FE0962994F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarFactory.Api", "CarFactory.Api\CarFactory.Api.csproj", "{A230A602-257D-43C3-943F-E9FE0962994F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarFactory.Domain", "CarFactory.Domain\CarFactory.Domain.csproj", "{DCF7868A-087A-49E3-8D65-27BE37A87B3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarFactory.Domain", "CarFactory.Domain\CarFactory.Domain.csproj", "{DCF7868A-087A-49E3-8D65-27BE37A87B3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarFactory.Service", "CarFactory.Service\CarFactory.Service.csproj", "{D8DADB20-A90C-44E0-A353-1D465BC00B4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarFactory.Application", "CarFactory.Service\CarFactory.Application.csproj", "{D8DADB20-A90C-44E0-A353-1D465BC00B4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarFactory.DataAccess", "CarFactory.DataAccess\CarFactory.DataAccess.csproj", "{E4AE993C-39EE-43C2-ABA2-17BBE1618313}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarFactory.Infrastructure", "CarFactory.DataAccess\CarFactory.Infrastructure.csproj", "{E4AE993C-39EE-43C2-ABA2-17BBE1618313}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway.Api", "ApiGateway.Api\ApiGateway.Api.csproj", "{3209A624-CAAD-4FF5-9E57-B987429A01F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway.Api", "ApiGateway.Api\ApiGateway.Api.csproj", "{3209A624-CAAD-4FF5-9E57-B987429A01F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JWT", "JWT", "{30CDE661-CAE6-408A-B10D-04CCDF363859}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authtorisation.Api", "Authtorisation.Api\Authtorisation.Api.csproj", "{3596E176-4E53-4DA5-AE55-8BC252FB2993}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{3BC578CE-8160-47E9-8790-314C71E3A958}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +129,14 @@ Global
 		{3209A624-CAAD-4FF5-9E57-B987429A01F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3209A624-CAAD-4FF5-9E57-B987429A01F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3209A624-CAAD-4FF5-9E57-B987429A01F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3596E176-4E53-4DA5-AE55-8BC252FB2993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3596E176-4E53-4DA5-AE55-8BC252FB2993}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3596E176-4E53-4DA5-AE55-8BC252FB2993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3596E176-4E53-4DA5-AE55-8BC252FB2993}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BC578CE-8160-47E9-8790-314C71E3A958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BC578CE-8160-47E9-8790-314C71E3A958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BC578CE-8160-47E9-8790-314C71E3A958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BC578CE-8160-47E9-8790-314C71E3A958}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -150,6 +164,8 @@ Global
 		{D8DADB20-A90C-44E0-A353-1D465BC00B4C} = {453C7E9F-EEF7-4E3A-809B-2CC62C1E22CB}
 		{E4AE993C-39EE-43C2-ABA2-17BBE1618313} = {453C7E9F-EEF7-4E3A-809B-2CC62C1E22CB}
 		{3209A624-CAAD-4FF5-9E57-B987429A01F0} = {8C3AF9E0-1E15-4EA3-A89D-BD6013ACB99E}
+		{30CDE661-CAE6-408A-B10D-04CCDF363859} = {73A826E7-7356-4421-8D37-56F572BC9CE4}
+		{3596E176-4E53-4DA5-AE55-8BC252FB2993} = {30CDE661-CAE6-408A-B10D-04CCDF363859}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B1E77C95-0EB2-4528-89CF-1A73C7B091EE}

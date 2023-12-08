@@ -26,10 +26,24 @@ services:
 
   apigateway.api:
     image: ${DOCKER_REGISTRY-}apigatewayapi
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:5000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
     build:
       context: .
       dockerfile: ApiGateway.Api/Dockerfile
     ports:
-        - 7080:80
+        - 9999:80
     networks:
         - backend
+
+  sport.api:
+    image: ${DOCKER_REGISTRY-}sportapi
+    build:
+      context: .
+      dockerfile: Sport.Api/Dockerfile
+    networks:
+        - backend
+

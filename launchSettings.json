@@ -5,7 +5,8 @@
       "commandVersion": "1.0",
       "serviceActions": {
         "educenter.api": "StartDebugging",
-        "apigateway.api": "StartDebugging"
+        "apigateway.api": "StartDebugging",
+        "sport.api": "StartDebugging"
       }
     }
   }
