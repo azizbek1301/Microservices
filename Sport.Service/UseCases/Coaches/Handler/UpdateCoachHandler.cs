@@ -18,7 +18,7 @@ namespace Sport.DataApplication.UseCases.Coaches.Handler
         {
             var coach = await _context.Coaches.FirstOrDefaultAsync(x => x.Id == request.Id);
             coach.Name = request.Name;
-            coach.Price = request.Price;
+            coach.Salary = request.Salary;
             coach.TeamId = request.TeamId;
 
             _context.Coaches.Update(coach);

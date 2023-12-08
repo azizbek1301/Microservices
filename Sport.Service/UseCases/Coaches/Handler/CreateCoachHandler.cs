@@ -19,7 +19,7 @@ namespace Sport.DataApplication.UseCases.Coaches.Handler
             var coach = new Coach()
             {
                 Name = request.Name,
-                Price = request.Price,
+                Salary = request.Salary,
                 TeamId = request.TeamId,
             };
 
