@@ -53,4 +53,5 @@ services:
     build:
       context: .
       dockerfile: Authtorisation.Api/Dockerfile
-
+    networks:
+        - backend

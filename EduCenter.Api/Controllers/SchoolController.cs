@@ -11,7 +11,7 @@ namespace EduCenter.Api.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    [Authorize(Roles ="Admin")]
+    
     public class SchoolController : ControllerBase
     {
         private readonly IMediator _mediatr;
@@ -40,6 +40,7 @@ namespace EduCenter.Api.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async ValueTask<IActionResult> GetAllSchoolAsync()
         {
             var school = await _mediatr.Send(new GetSchoolCommand());
