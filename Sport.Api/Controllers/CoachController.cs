@@ -39,6 +39,7 @@ namespace Sport.Api.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
 
         public async ValueTask<IActionResult> GetAllCoachAsync()
         {

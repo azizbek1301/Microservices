@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Sport.Api.ViewModel;
@@ -36,6 +37,7 @@ namespace Sport.Api.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
 
         public async ValueTask<IActionResult> GetAllTeamAsync()
         {
