@@ -39,7 +39,7 @@ namespace EduCenter.Api.Controllers
         }
 
         [HttpGet]
-        
+        [Authorize(Roles ="Admin")]
         public async ValueTask<IActionResult> GetAllGroupAsync()
         {
             var value = _memoryCache.Get("Id");

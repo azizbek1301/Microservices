@@ -4,6 +4,7 @@ using EduCenter.Application.UseCases.Room.Queries;
 using EduCenter.Application.UseCases.School.Queries;
 using EduCenter.Domain.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 
@@ -38,6 +39,7 @@ namespace EduCenter.Api.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async ValueTask<IActionResult> GetAllRoomAsync()
         {
             var value = _memoryCache.Get("Id");

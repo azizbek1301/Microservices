@@ -3,6 +3,7 @@ using EduCenter.Application.UseCases.Teacher.Commands;
 using EduCenter.Application.UseCases.Teacher.Queries;
 using EduCenter.Domain.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 
@@ -39,6 +40,8 @@ namespace EduCenter.Api.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
+
         public async ValueTask<IActionResult> GetAllTeacherAsync()
         {
             var teacher = await _mediatr.Send(new GetAllTeacherCommand());

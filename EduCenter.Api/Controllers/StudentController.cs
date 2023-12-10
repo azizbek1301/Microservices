@@ -4,6 +4,7 @@ using EduCenter.Application.UseCases.Student.Commands;
 using EduCenter.Application.UseCases.Student.Queries;
 using EduCenter.Domain.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 
@@ -42,6 +43,8 @@ namespace EduCenter.Api.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
+
         public async ValueTask<IActionResult> GetAllStudentAsync()
         {
             var value = _memoryCache.Get("Id");
